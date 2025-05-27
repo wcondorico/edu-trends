@@ -1,6 +1,9 @@
-import {Component} from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {signInForm} from './login.form';
 import {ReactiveFormsModule} from '@angular/forms';
+import { RouteApp } from '../../../../shared/routes/app.route';
+import { RouteLinkAuthentication } from '../../../../shared/routes/authentication.route';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +13,14 @@ import {ReactiveFormsModule} from '@angular/forms';
 })
 export class LoginComponent {
   readonly form = signInForm();
+  private readonly router = inject(Router);
 
   signIn() {
     console.log('Login', this.form.value)
   }
 
   goToRegister() {
-    console.log('go to register')
+    this.router.navigateByUrl(`${ RouteApp.AUTHENTICATION }/${ RouteLinkAuthentication.REGISTRATION }`)
   }
 
 }

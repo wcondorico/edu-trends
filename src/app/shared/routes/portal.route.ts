@@ -1,5 +1,5 @@
 export enum RoutePortal {
-  PRESENTATION = 'presentación',
+  PRESENTATION = 'presentacion',
   GROUPS = 'grupos',
   PROFILE = 'perfil',
 }
