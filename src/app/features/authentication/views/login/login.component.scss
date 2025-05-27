@@ -1,8 +1,8 @@
 @use 'colors' as *;
 
 .container {
-  height: 100dvh;
   display: flex;
+  min-height: 100dvh;
   justify-content: center;
   align-items: center;
   background: linear-gradient(210deg, $primary, $primary-extra-light);
