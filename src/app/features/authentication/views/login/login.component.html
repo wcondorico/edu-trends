@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="container">
+  <div class="img">
+    <img src="https://cdn-icons-png.flaticon.com/512/718/718026.png" alt="">
+  </div>
+
+  <div class="data">
+    <form class="login" [formGroup]="form" (submit)="signIn()">
+      <h1>Iniciar Sesión</h1>
+
+      <span class="label">Correo Electrónico</span>
+      <input type="text" placeholder="Ingrese su correo electrónico" formControlName="email">
+
+      <span class="label">Contraseña</span>
+      <input type="text" placeholder="Ingrese su contrtaseña" formControlName="password">
+
+      <button type="submit">Ingresar</button>
+
+      <div class="register">
+        <span>¿Eres nuevo? </span>
+        <button type="button" (click)="goToRegister()">Registrate aquí</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

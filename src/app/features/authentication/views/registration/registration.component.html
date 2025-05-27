@@ -1,1 +1,41 @@
-<p>registration works!</p>
+<div class="container">
+  <div class="img">
+    <img src="https://cdn-icons-png.flaticon.com/512/718/718026.png" alt="">
+  </div>
+
+  <div class="data">
+    <form class="register" [formGroup]="form" (submit)="signUp()">
+      <h1>Regístrate</h1>
+
+      <div class="radios">
+        <span>Tipo de usuario:</span>
+        <div class="radios__option">
+          <input type="radio" name="userType" value="Alumno" id="student" formControlName="userType">
+          <label for="student">Alumno</label>
+        </div>
+        <div class="radios__option">
+          <input type="radio" name="userType" value="Profesor" id="teacher" formControlName="userType">
+          <label for="teacher">Profesor</label>
+        </div>
+      </div>
+
+      <span>Nombres Completos</span>
+      <input type="text" placeholder="Ingrese sus nombres" formControlName="fullName">
+
+      <span>Correo Electrónico</span>
+      <input type="text"  placeholder="Ingrese su correo electrónico" formControlName="email">
+
+      <span>Contraseña</span>
+      <input type="text" placeholder="Ingrese su contrtaseña" formControlName="password">
+
+      <button type="submit">Registrarse</button>
+
+      <div class="login">
+        <span>Si ya tienes una cuenta </span>
+        <button type="button" (click)="goToLogin()">Inicia sesión aquí</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

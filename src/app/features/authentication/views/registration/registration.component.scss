@@ -1,0 +1,114 @@
+@use 'colors' as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(210deg, $primary, $primary-extra-light);
+
+  .img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .data {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+
+    .register {
+      width: 479px;
+      border-radius: 30px;
+      background: linear-gradient(110deg, $white-gradient-4, $white-gradient-05);
+      padding: 20px 35px;
+      border: solid 1px rgba(46, 85, 96, 1);
+      display: flex;
+      flex-direction: column;
+
+      .radios {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        & span {
+          margin: 0;
+        }
+
+        &__option {
+          display: flex;
+          gap: 5px;
+          color: $placeholder;
+
+          &>input {
+            appearance: none;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #999;
+            transition: 0.2s all linear;
+            cursor: pointer;
+
+            &:checked {
+              background-color: white;
+            }
+          }
+        }
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      span {
+        color: white;
+        margin-bottom: 8px;
+      }
+
+      input {
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        margin-bottom: 30px;
+        background: linear-gradient(110deg, $white-gradient-4, $white-gradient-2);
+        color: white;
+        font-weight: bold;
+
+        &::placeholder {
+          color: $placeholder;
+        }
+      }
+
+      button {
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 20px;
+        background-color: $secondary;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 25px;
+        cursor: pointer;
+      }
+
+      .login {
+        text-align: center;
+
+        > button{
+          font-weight: bold;
+          color: white;
+          cursor: pointer;
+          padding: 0;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
