@@ -4,6 +4,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { RouteApp } from '../../../../shared/routes/app.route';
 import { RouteLinkAuthentication } from '../../../../shared/routes/authentication.route';
 import { Router } from '@angular/router';
+import { UserFacade } from '../../application/facade/user.facade';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,21 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   readonly form = signInForm();
   private readonly router = inject(Router);
+  private readonly userFacade = inject(UserFacade);
 
   signIn() {
-    console.log('Login', this.form.value)
+    if (this.form.invalid) return;
+
+    this.userFacade.signIn(this.form.getRawValue()).subscribe({
+      next: () => {
+        this.router.navigateByUrl(
+          `${RouteApp.PORTAL}`
+        );
+      },
+      error: () => {
+        console.log('error al registrarse')
+      },
+    });
   }
 
   goToRegister() {
