@@ -1,0 +1,22 @@
+@use 'colors' as *;
+
+button {
+  padding: 14px 20px;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  text-align: left;
+  background-color: transparent;
+  color: $font-white;
+  font-size: 20px;
+  outline: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &:hover, &.active {
+    background: $secondary-transparent;
+    color: $font-accent;
+  }
+}

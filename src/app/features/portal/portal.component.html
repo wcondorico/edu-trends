@@ -1,5 +1,24 @@
-<p>portal works!</p>
 
-<app-presentation></app-presentation>
-<app-profile></app-profile>
-<app-variants-groups></app-variants-groups>
+<div class="portal">
+
+  <div class="header">
+    <div class="icon">E</div>
+    <p>EduTrends</p>
+  </div>
+
+  <div class="container">
+    <div class="menu">
+      @for (item of menuItems; track $index) {
+        <app-menu-button [icon]="item.icon">{{ item.text }}</app-menu-button>
+      }
+    </div>
+
+    <div class="content">
+      <div class="content__header">
+      </div>
+      <div class="content__main">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
