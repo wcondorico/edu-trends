@@ -3,18 +3,24 @@
 
   <div class="header">
     <div class="icon">E</div>
-    <p>EduTrends</p>
+    <app-title size="20">EduTrends</app-title>
   </div>
 
   <div class="container">
     <div class="menu">
+      <div class="menu__title">
+        <app-title size="18">Menú principal</app-title>
+      </div>
       @for (item of menuItems; track $index) {
-        <app-menu-button [icon]="item.icon">{{ item.text }}</app-menu-button>
+        <app-menu-button [icon]="item.icon" [link]="item.link">{{ item.text }}</app-menu-button>
       }
     </div>
 
     <div class="content">
       <div class="content__header">
+        <app-title size="18">
+          {{title()}}
+        </app-title>
       </div>
       <div class="content__main">
         <router-outlet></router-outlet>

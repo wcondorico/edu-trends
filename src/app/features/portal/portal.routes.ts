@@ -1,6 +1,5 @@
 import { Routes } from "@angular/router";
 import { RoutePortal } from '../../shared/routes/portal.route';
-import { RouteAuthentication } from '../../shared/routes/authentication.route';
 
 export const portalRoutes: Routes = [
   {
@@ -11,6 +10,10 @@ export const portalRoutes: Routes = [
         path: '',
         redirectTo: RoutePortal.PRESENTATION,
         pathMatch: 'full'
+      },
+      {
+        path: RoutePortal.PRESENTATION,
+        loadComponent: () => import('../portal/views/presentation/presentation.component').then(c => c.PresentationComponent)
       },
       {
         path: RoutePortal.GROUPS,

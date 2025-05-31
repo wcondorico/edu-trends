@@ -18,7 +18,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 20px;
 
     .icon {
       width: 28px;
@@ -31,12 +30,6 @@
       font-weight: bold;
       color: $font-dark;
     }
-
-    > p {
-      color: $font-accent;
-      font-weight: bold;
-      margin: 0;
-    }
   }
 
   .container {
@@ -45,19 +38,31 @@
     gap: 20px;
 
     .menu {
-      width: 230px;
+      width: 200px;
       background: $background;
       border-radius: 16px;
       padding: 16px 20px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+
+      &__title {
+        text-align: center;
+        margin: 10px 0;
+      }
     }
 
     .content {
       flex: 1;
       background: $background;
       border-radius: 16px;
+      padding: 26px;
+
+      &__header {
+
+      }
+
+      &__main {
+      }
     }
   }
 }

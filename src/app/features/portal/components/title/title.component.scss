@@ -1,0 +1,6 @@
+@use 'colors' as *;
+
+span {
+  color: $font-accent;
+  font-weight: bold;
+}
