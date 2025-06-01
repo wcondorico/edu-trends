@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component, signal } from '@angular/core';
 import {StudentComponent} from './student/student.component';
 import {TeacherComponent} from './teacher/teacher.component';
 
@@ -9,5 +9,5 @@ import {TeacherComponent} from './teacher/teacher.component';
   styleUrl: './variants-groups.component.scss'
 })
 export class VariantsGroupsComponent {
-
+  user = signal('student')
 }

@@ -1,1 +1,33 @@
-<p>student works!</p>
+<div class="section">
+  <div class="header">
+    <app-title size="18">📋 Grupos subscritos</app-title>
+    <app-button [variant]="Button.primary">Unirse a un grupo</app-button>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Grado</th>
+        <th>Email</th>
+        <th>Estado</th>
+        <th>Promedio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ana García</td>
+        <td>5to Grado</td>
+        <td>ana.garcia email.com</td>
+        <td><span class="status active">Activo</span></td>
+        <td>9.2</td>
+      </tr>
+      <tr>
+        <td>Carlos Ruiz</td>
+        <td>4to Grado</td>
+        <td>carlos.ruiz email.com</td>
+        <td><span class="status active">Activo</span></td>
+        <td>8.7</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

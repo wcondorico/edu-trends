@@ -1,5 +1,9 @@
-<p>Variant-groups working!</p>
+
+@if (user() == 'student') {
+  <app-student></app-student>
+} @else {
+  <app-teacher></app-teacher>
+}
 
 
-<app-student></app-student>
-<app-teacher></app-teacher>
+
