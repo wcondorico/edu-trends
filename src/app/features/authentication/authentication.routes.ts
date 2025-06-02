@@ -8,6 +8,11 @@ export const authenticationRoutes: Routes = [
     loadComponent: () => import('./authentication.component').then(c => c.AuthenticationComponent),
     children: [
       {
+        path: '',
+        redirectTo: RouteAuthentication.REGISTRATION,
+        pathMatch: 'full'
+      },
+      {
         path: RouteAuthentication.REGISTRATION,
         loadComponent: () => import('./views/registration/registration.component').then(c => c.RegistrationComponent)
       },
